@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'FavoriteWidget.dart';
 
 class RowDemo extends StatefulWidget {
   @override
@@ -49,11 +50,7 @@ class RowDemoState extends State<RowDemo> {
                 style: new TextStyle(color: Colors.grey[500]),
               )
             ])),
-        new Icon(
-          Icons.star,
-          color: Colors.red[500],
-        ),
-        new Text('41')
+        new FavoriteWidget(),
       ],
     ),
   );
