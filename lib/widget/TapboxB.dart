@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
 class TapboxB extends StatelessWidget {
+  TapboxB({Key key, this.isActive: false, @required this.onChanged})
+      : super(key: key);
 
-  TapboxB({Key key,this.isActive: false,@required this.onChanged}) : super(key: key);
+  final bool isActive;
+  final ValueChanged<bool> onChanged;
 
-  bool isActive;
-  ValueChanged<bool> onChanged;
-
-  void _handleTap(){
+  void _handleTap() {
     onChanged(!isActive);
   }
 
@@ -28,6 +28,7 @@ class TapboxB extends StatelessWidget {
         decoration: new BoxDecoration(
             color: isActive ? Colors.lightGreen[700] : Colors.grey[500]),
       ),
-    onTap: _handleTap,);
+      onTap: _handleTap,
+    );
   }
 }

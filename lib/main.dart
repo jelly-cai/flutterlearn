@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstflutterapp/widget/ParentWidget.dart';
+import 'package:myfirstflutterapp/widget/ParallelLogoWidget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       theme: new ThemeData(primaryColor: Colors.blue),
-      home: new Center(child: new ParentWidget()),
+      home: new Center(child: new ParallelLogoWidget()),
     );
   }
 }

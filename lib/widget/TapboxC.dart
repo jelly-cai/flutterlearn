@@ -4,8 +4,8 @@ import 'package:flutter/foundation.dart';
 class TapboxC extends StatefulWidget {
   TapboxC({this.active: false, @required this.onChanged});
 
-  bool active;
-  ValueChanged<bool> onChanged;
+  final bool active;
+  final ValueChanged<bool> onChanged;
 
   @override
   State<StatefulWidget> createState() {
