@@ -12,10 +12,8 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       theme: new ThemeData(primaryColor: Colors.blue),
-      home: new PageOneWidget(),
-      routes: <String, WidgetBuilder>{
-        '/two': (_) => new PageTwoWidget(),
-      },
+      home: new Scaffold(
+          appBar: new AppBar(title: new Text("测试")), body: new PageOneWidget()),
     );
   }
 }
