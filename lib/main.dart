@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstflutterapp/widget/ParallelLogoWidget.dart';
+import 'package:myfirstflutterapp/widget/PageOneWidget.dart';
+import 'package:myfirstflutterapp/widget/PageTwoWidget.dart';
+import 'package:myfirstflutterapp/widget/RowDemo.dart';
+import 'package:myfirstflutterapp/widget/TextFieldWidget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -9,7 +12,10 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       theme: new ThemeData(primaryColor: Colors.blue),
-      home: new Center(child: new ParallelLogoWidget()),
+      home: new PageOneWidget(),
+      routes: <String, WidgetBuilder>{
+        '/two': (_) => new PageTwoWidget(),
+      },
     );
   }
 }
