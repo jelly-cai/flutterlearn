@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myfirstflutterapp/list/GridViewBuildWidget.dart';
 import 'package:myfirstflutterapp/list/GridViewWidget.dart';
-import 'package:myfirstflutterapp/notice/BottomSheetWidget.dart';
 import 'package:myfirstflutterapp/widget/PageOneWidget.dart';
 
 void main() => runApp(new MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       theme: new ThemeData(primaryColor: Colors.blue),
-      home: BottomSheetWidget(),
+      home: GridViewBuildWidget(),
     );
   }
 }

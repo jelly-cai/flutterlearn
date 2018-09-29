@@ -15,6 +15,12 @@ class GridViewWidget extends StatelessWidget {
         children: <Widget>[
           buildItem(Icons.cake),
           buildItem(Icons.title),
+          buildItem(Icons.account_circle),
+          buildItem(Icons.account_circle),
+          buildItem(Icons.account_circle),
+          buildItem(Icons.account_circle),
+          buildItem(Icons.account_circle),
+          buildItem(Icons.account_circle),
           buildItem(Icons.account_circle)
         ],
       ),
