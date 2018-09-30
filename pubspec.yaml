@@ -10,6 +10,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   english_words: ^3.1.3
   shared_preferences: ^0.4.2
+  path_provider: ^0.4.1
+  sqflite: ^0.12.1
 
 dev_dependencies:
   flutter_test:
