@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class LinearProgressIndicatorWidget extends StatefulWidget {
+class CircularProgressIndicatorWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return LinearProgressIndicatorWidgetState();
+    return CircularProgressIndicatorWidgetState();
   }
 }
 
-class LinearProgressIndicatorWidgetState extends State {
+class CircularProgressIndicatorWidgetState extends State {
   var _progressValue = 0.0;
 
-  _handleProgress(){
+  _handleProgress() {
     setState(() {
       _progressValue += 0.1;
-      if(_progressValue > 1.0){
+      if (_progressValue > 1.0) {
         _progressValue = 0.0;
       }
     });
@@ -29,8 +29,9 @@ class LinearProgressIndicatorWidgetState extends State {
       ),
       body: Column(
         children: <Widget>[
-          LinearProgressIndicator(
+          CircularProgressIndicator(
             value: _progressValue,
+            strokeWidth: 10.0,
           ),
           RaisedButton(
             onPressed: _handleProgress,
