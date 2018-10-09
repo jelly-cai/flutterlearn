@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:myfirstflutterapp/http/cms_info_model.dart';
 
 class HttpWidget extends StatelessWidget {
   @override
@@ -31,20 +34,11 @@ postRequest() {
 
 aliveConnect() {
   var client = new http.Client();
-  client
-      .post("http://183.57.47.83:1080/cmsInfo/query_first",
-          body: {"orgCode": "0001"})
-      .then((response) => client.post(
-          "http://183.57.47.83:1080/choose/query_appfirst",
-          body: {"orgCode": "0001", "type": "app"}))
-      .then((response) => print(response.body))
-      .whenComplete(client.close);
-}
-
-class CmsInfo{
-  int code;
-  String message;
-
-
-
+  client.post("http://183.57.47.83:1080/cmsInfo/query_first",
+      body: {"orgCode": "0001"}).then((response) {
+    CmsInfo cmsInfo = CmsInfo.fromJson(json.decode(response.body));
+    client.get(cmsInfo.dataList[0].url).then((response) {
+      print(response.body);
+    }).whenComplete(client.close);
+  });
 }
