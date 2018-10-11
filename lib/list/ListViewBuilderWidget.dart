@@ -16,7 +16,7 @@ class ListViewBuilderWidgetState extends State<ListViewBuilderWidget> {
     // TODO: implement initState
     super.initState();
     for (int i = 0; i < 20; i++) {
-      items.add(Item("标题",Icons.title));
+      items.add(Item("标题", Icons.title));
     }
   }
 
