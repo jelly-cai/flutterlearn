@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:myfirstflutterapp/animation/animation_widget.dart';
 
-class AnimationWidget extends StatefulWidget {
+class AnimationTextWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return AnimationWidgetState();
+    return AnimationTextWidgetState();
   }
 }
 
-class AnimationWidgetState extends State with SingleTickerProviderStateMixin {
+class AnimationTextWidgetState extends State
+    with SingleTickerProviderStateMixin {
   Animation<double> animate;
   AnimationController animateController;
 
@@ -20,10 +22,7 @@ class AnimationWidgetState extends State with SingleTickerProviderStateMixin {
         AnimationController(vsync: this, duration: Duration(seconds: 10));
     animate = Tween(begin: 0.0, end: 100.0).animate(animateController)
       ..addListener(() {
-        setState(() {
-          print(animateController.value);
-          print(animate.value);
-        });
+
       });
   }
 
@@ -37,9 +36,7 @@ class AnimationWidgetState extends State with SingleTickerProviderStateMixin {
       body: Center(
         child: RaisedButton(
           onPressed: startAnimate,
-          child: Text(animate.value.toInt() == 0
-              ? "点击"
-              : animate.value.toInt().toString()),
+          child: MyAnimateTextWidget(animate),
         ),
       ),
     );
@@ -54,5 +51,17 @@ class AnimationWidgetState extends State with SingleTickerProviderStateMixin {
     // TODO: implement dispose
     super.dispose();
     animateController.dispose();
+  }
+}
+
+class MyAnimateTextWidget extends AnimatedWidget {
+  MyAnimateTextWidget(Animation<double> animation)
+      : super(listenable: animation);
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    Animation<double> animation = listenable;
+    return Center(child: Text(animation.value.toInt().toString()),);
   }
 }

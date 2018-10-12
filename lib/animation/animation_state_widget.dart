@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class AnimationWidget extends StatefulWidget {
+class AnimationStateWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return AnimationWidgetState();
+    return AnimationStateWidgetState();
   }
 }
 
-class AnimationWidgetState extends State with SingleTickerProviderStateMixin {
+class AnimationStateWidgetState extends State with SingleTickerProviderStateMixin {
   Animation<double> animate;
   AnimationController animateController;
 
@@ -21,9 +21,19 @@ class AnimationWidgetState extends State with SingleTickerProviderStateMixin {
     animate = Tween(begin: 0.0, end: 100.0).animate(animateController)
       ..addListener(() {
         setState(() {
-          print(animateController.value);
-          print(animate.value);
         });
+      })..addStatusListener((status){
+        if(status == AnimationStatus.forward){
+          print("动画开始");
+        }else if(status == AnimationStatus.completed){
+          print("动画完成");
+          animateController.reverse();
+        }else if(status == AnimationStatus.reverse){
+          print("动画反转");
+        }else if(status == AnimationStatus.dismissed){
+          print("动画消失");
+          animateController.forward();
+        }
       });
   }
 
