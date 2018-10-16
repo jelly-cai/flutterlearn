@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstflutterapp/animation/animation_cross_fade_widget.dart';
+import 'package:myfirstflutterapp/animation/hero_widget.dart';
 import 'package:myfirstflutterapp/widget/PageOneWidget.dart';
 
 void main() => runApp(new MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       theme: new ThemeData(primaryColor: Colors.blue),
-      home: AnimationCrossFadeWidget(),
+      home: HeroWidget(),
     );
   }
 }
