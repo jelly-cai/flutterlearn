@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstflutterapp/animation/animation_widget.dart';
 
 class AnimationTextWidget extends StatefulWidget {
   @override

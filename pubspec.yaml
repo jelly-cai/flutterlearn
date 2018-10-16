@@ -41,6 +41,7 @@ flutter:
     - assets/shape.json
     - assets/product.json
     - assets/photo.json
+    - assets/apple-logo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
