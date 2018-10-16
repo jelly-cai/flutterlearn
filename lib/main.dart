@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstflutterapp/animation/hero_login_widget.dart';
-import 'package:myfirstflutterapp/button/material_button_widget.dart';
+import 'package:myfirstflutterapp/sliverappbar/sliver_app_bar_widget.dart';
 import 'package:myfirstflutterapp/widget/PageOneWidget.dart';
 
 void main() => runApp(new MyApp());
@@ -11,7 +10,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       theme: new ThemeData(primaryColor: Colors.blue),
-      home: HeroLoginWidget(),
+      home: SliverAppBarWidget(),
     );
   }
 }
