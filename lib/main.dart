@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myfirstflutterapp/tooltip/use_my_tool_tip_widget.dart';
+import 'package:myfirstflutterapp/chip/chip_demp_widget.dart';
 import 'package:myfirstflutterapp/widget/PageOneWidget.dart';
 
 void main() => runApp(new MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       theme: new ThemeData(primaryColor: Colors.blue),
-      home: UseMyToolTipWidget(),
+      home: ChipDemoWidget(),
     );
   }
 }
