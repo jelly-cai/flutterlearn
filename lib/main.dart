@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myfirstflutterapp/tooltip/tool_tip_widget.dart';
 import 'package:myfirstflutterapp/widget/PageOneWidget.dart';
 import 'package:myfirstflutterapp/wrap/wrap_novel_widget.dart';
-import 'package:myfirstflutterapp/wrap/wrap_widget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Welcome to Flutter',
       theme: new ThemeData(primaryColor: Colors.blue),
-      home: WrapNovelWidget(),
+      home: ToolTipWidget(),
     );
   }
 }
