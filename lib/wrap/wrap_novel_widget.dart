@@ -23,7 +23,7 @@ class WrapNovelWidget extends StatelessWidget {
               MyButton(text: "大主宰"),
               MyButton(text: "仙逆"),
               MyButton(text: "斗鱼"),
-              MyButton(text: "校花的贴身高手"),
+              Wrap(children: <Widget>[MyButton(text: "校花112222333"),Text("adadada")]),
               MyButton(text: "酒神"),
               MyButton(text: "最好的我们")
             ],

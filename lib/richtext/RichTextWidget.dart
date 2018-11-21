@@ -16,6 +16,7 @@ class RichTextWidget extends StatelessWidget {
             children: [
               TextSpan(text: "123",style: TextStyle(fontSize: 19.0, color: Colors.red), children: [
                 TextSpan(
+
                     text: "456",
                     children: [TextSpan(text: "789")])
               ])
