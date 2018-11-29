@@ -13,6 +13,7 @@ dependencies:
   path_provider: ^0.4.1
   sqflite: ^0.12.1
   http: ^0.12.0
+  dio: ^1.0.9
 
 dev_dependencies:
   flutter_test:
