@@ -38,12 +38,15 @@ class DioWidget extends StatelessWidget {
     Dio dio = Dio();
     Directory tempDir = await getTemporaryDirectory();
     String tempPath = tempDir.path;
-    print(tempPath);
     CookieJar cj = PersistCookieJar(tempPath);
     dio.cookieJar = cj;
+    dio.options.followRedirects = true;
+    dio.options.validateStatus = (status){
+      print(status);
+      return true;
+    };
     Response response =
         await dio.post("https://www.v2ex.com/signin", data: formData);
     print(response.toString());
-    print(dio.cookieJar.toString());
   }
 }
