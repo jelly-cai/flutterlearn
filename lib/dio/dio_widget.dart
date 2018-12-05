@@ -27,13 +27,13 @@ class DioWidget extends StatelessWidget {
   void quest() async {
     FormData formData = FormData.from({
       "next": "/",
-      "e9919016ae9400036441bb4c7bd06d885e972dd97c0b3a1e87a84aa3e0ae6d60":
+      "aa0f6addc89e896b171e086603ccf5dee5eddb37bbc5930883373383eeee915f":
           "jellycai",
-      "once": "46419",
-      "d58bb2de2e092801cab4a255a8a151abb12e0216331c2c1a5f23e77680490d5f":
+      "once": "94416",
+      "1f6eace3a3edf084db1fdde410a479af5ab8bd26d3eb7efd8d5b838ed0988ab5":
           "123456789CAI",
-      "144908d481ad8f1c968e6af891701776481b17a6739d41b719f298c2867a42da":
-          "INNNG"
+      "e75c6e6c7e15d797bc7e710005147b7314ad3f8a8aa9ec6f9cf5f80c39e57744":
+          "SGJSM"
     });
     Dio dio = Dio();
     Directory tempDir = await getTemporaryDirectory();
@@ -47,6 +47,7 @@ class DioWidget extends StatelessWidget {
     };
     Response response =
         await dio.post("https://www.v2ex.com/signin", data: formData);
-    print(response.toString());
+    Response response2 = await dio.get("https://www.v2ex.com/");
+    print(response2.data);
   }
 }
